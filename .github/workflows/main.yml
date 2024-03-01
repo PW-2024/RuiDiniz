@@ -1,1 +1,11 @@
+name:"pipeline_Rui"
 
+on:
+  push:
+    '*'
+ jobs:
+   run:"npm install"
+   run:"npm run build"
+   run:"npm run prettier"
+   
+    
