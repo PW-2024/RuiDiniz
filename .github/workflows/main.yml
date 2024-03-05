@@ -4,11 +4,14 @@ on:
   push:
     branches:
       - '*'
-      
- jobs:
-   runs-on: ubuntu-latest
-   steps:
+
+jobs:
+  build_and_format:
+    runs-on: ubuntu-latest
+    steps:
       - uses: actions/checkout@v4
+
         run: npm install
         run: npm run build
         run: npm run prettier
+
