@@ -1,15 +1,14 @@
-name:"pipeline_Rui"
+name: pipeline_Rui
 
 on:
   push:
     branches:
-      -'*'
+      - '*'
       
  jobs:
+   runs-on: ubuntu-latest
    steps:
       - uses: actions/checkout@v4
-        run:"npm install"
-        run:"npm run build"
-        run:"npm run prettier"
-   
-    
+        run: npm install
+        run: npm run build
+        run: npm run prettier
