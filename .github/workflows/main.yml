@@ -2,10 +2,14 @@ name:"pipeline_Rui"
 
 on:
   push:
-    '*'
+    branches:
+      -'*'
+      
  jobs:
-   run:"npm install"
-   run:"npm run build"
-   run:"npm run prettier"
+   steps:
+      - uses: actions/checkout@v4
+        run:"npm install"
+        run:"npm run build"
+        run:"npm run prettier"
    
     
