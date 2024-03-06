@@ -1,17 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import React from "react";
+import Receitas from "./Receitas";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <Receitas />
+
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
-          Mudar código 3....
-
-        </p>
-       
+          </p>
       </header>
     </div>
   );
