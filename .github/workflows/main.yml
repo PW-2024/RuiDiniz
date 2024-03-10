@@ -3,15 +3,31 @@ name: pipeline_Rui
 on:
   push:
     branches:
-      - '*'
+      - '**' 
 
 jobs:
-  build_and_format:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+      - name: Install Dependencies
         run: npm install
+      - name: Build
         run: npm run build
+  
+  format:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+      - name: Install Dependencies
+        run: npm install
+      - name: Prettier Check
         run: npm run prettier
-
