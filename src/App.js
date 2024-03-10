@@ -9,9 +9,7 @@ function App() {
       <header className="App-header">
         <Receitas />
 
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          </p>
+        <p></p>
       </header>
     </div>
   );
